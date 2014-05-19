@@ -20,6 +20,7 @@ group :development, :test do
   # Uncomment this line on OS X.
   # gem 'growl'
   gem 'ruby_gntp'
+  gem 'annotate', '>=2.6.0'
 end
 
 group :test do
