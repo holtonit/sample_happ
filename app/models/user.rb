@@ -8,11 +8,13 @@
 #  password_digest :string(255)
 #  created_at      :datetime
 #  updated_at      :datetime
+#  remember_token  :string(255)
 #
 
 class User < ActiveRecord::Base
 
   before_save { email.downcase! }
+  before_create :create_remember_token
 
   # Mandatory columns
   validates :name, presence: true
